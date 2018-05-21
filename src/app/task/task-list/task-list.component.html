@@ -1,0 +1,28 @@
+<br/>
+<div class="row">
+    <div class="col-sm-12">
+        <app-task-button-new></app-task-button-new>
+    </div>
+</div>
+<br/>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Task</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let task of tasks">
+        <td>{{ task.task }}</td>
+        <td>
+            <button class="btn btn-default btn-sm"
+                    (click)="goToView(task.id)">View</button>
+            <button class="btn btn-primary btn-sm"
+                    (click)="editTask(task.id)">Edit</button>
+            <button class="btn btn-danger btn-sm"
+                    (click)="deleteTask(task.id)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

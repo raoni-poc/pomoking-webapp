@@ -1,0 +1,53 @@
+.play {
+    width: 74px;
+    height: 74px;
+    border-style: solid;
+    border-width: 37px 0px 37px 74px;
+    border-color: transparent transparent transparent #202020;
+    box-sizing: border-box;
+
+}
+
+.pause {
+    width: 74px;
+    height: 74px;
+    border-style: double;
+    border-width: 0px 0px 0px 37px;
+    border-color: #202020;
+}
+
+.playOrPause {
+    padding: 30px;
+    max-width: 400px;
+    margin: 30px auto;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #202020;
+}
+
+/*.playOrPauseBorder{*/
+    /*width: 110px;*/
+    /*height: 110px;*/
+    /*margin: 0 auto;*/
+    /*border-style: solid;*/
+    /*border-color: #202020;*/
+    /*!*padding-top: 50px;*!*/
+    /*!*padding-bottom: 50px;*!*/
+    /*!*padding-right: -50px;*!*/
+    /*!*padding-left: -50px;*!*/
+    /*border-radius: 50px;*/
+/*}*/
+
+.currentTime{
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.totalTime{
+    text-align: center;
+}
+
+.task{
+    text-align: center;
+}

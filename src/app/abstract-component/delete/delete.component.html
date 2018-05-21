@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-default" role="alert">
+                <h4 class="alert-heading">Delete {{ entityTitle }}</h4>
+
+                <p>Please, confirm deletation: </p>
+                <p class="mb-0">{{ deleteConfirmation }}</p>
+                <hr>
+                <button class="btn btn-success btn-sm"
+                        (click)="goBack()">Cancel</button>
+                <button class="btn btn-danger btn-sm"
+                        (click)="deleteEntity()">Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div>
+
+    <div class="playOrPause">
+
+        <!--<div class="playOrPauseBorder">-->
+        <!--<div class="row" *ngIf="play">-->
+        <!--<div class="col-sm-12">-->
+        <div class='pause mx-auto' (click)="playOrPause()" *ngIf="play"></div>
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="row" *ngIf="!play">-->
+        <!--<div class="col-sm-12">-->
+        <div class='play mx-auto' (click)="playOrPause()" *ngIf="!play"></div>
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+
+
+        <br>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12 currentTime">
+                {{ tick | formatTimer }}
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12 totalTime">
+                Total Time: {{ totalTime | formatTimer }}
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row">
+            <div class="col-sm-12 task" (click)="editTask(task.id)">
+                <div *ngIf="task?.task">{{ task?.task }}</div>
+                <div *ngIf="!task?.task">loading...</div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,108 @@
+<div class="container">
+    <div class="row">
+        <form [formGroup]="taskForm"
+              (ngSubmit)="onSubmit()"
+              class="col-sm-12">
+            <div class="row">
+                <div class="text-left col-8">
+                    <h4>{{ title }}</h4>
+                </div>
+                <div class="text-right col-4">
+                    <button type="button" class="btn btn-default btn-sm" (click)="goBack()">X</button>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-sm-4" for="task">
+                        Task:
+                    </label>
+                    <input type="text"
+                           class="form-control col-sm-8"
+                           placeholder="Task Name"
+                           id="task"
+                           name="task"
+                           formControlName="task"
+                           value="{{task?.task}}">
+                </div>
+                <!--<div class="row">-->
+                <!--<div class="col-sm-4"></div>-->
+                <!--<small id="nameHelp" class="form-text text-muted col-sm-8 text-danger">-->
+                <!--Error msg-->
+                <!--</small>-->
+                <!--</div>-->
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-sm-4" for="description">Description: </label>
+                    <textarea class="form-control col-sm-8"
+                              id="description"
+                              name="description"
+                              formControlName="description"
+                              rows="3"
+                              value="{{task?.description}}"></textarea>
+                </div>
+                <!--<div class="row">-->
+                    <!--<div class="col-sm-4"></div>-->
+                    <!--<small id="nameHelp" class="form-text text-muted col-sm-8 text-danger">-->
+                        <!--Error msg-->
+                    <!--</small>-->
+                <!--</div>-->
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-sm-4" for="categorySelect">Category: </label>
+                    <select class="form-control col-sm-8"
+                            id="categorySelect"
+                            formControlName="category">
+                        <option *ngFor="let c of categories" [ngValue]="c">{{ c }}</option>
+
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-sm-4" for="estimate">Estimate: </label>
+                    <input type="number"
+                           class="form-control col-sm-3"
+                           id="estimate"
+                           name="estimate"
+                           formControlName="estimate"
+                           value="{{task?.estimate}}">
+                    <div class="col-sm-5"></div>
+                </div>
+            </div>
+
+            <br/>
+
+
+
+            <div class="form-group">
+                <div class="row">
+                    <div class="form-check">
+                        <span class="align-top">Task Complete&nbsp;&nbsp;&nbsp;</span>
+                        <label class="switch align-bottom">
+                            <input type="checkbox"
+                                   id="completed"
+                                   name="completed"
+                                   formControlName="completed"
+                                    [checked]="task?.completed_at"/>
+                            <span class="slider round"></span>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <br/>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-default" (click)="goBack()">Cancel</button>
+        </form>
+    </div>
+</div>

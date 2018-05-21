@@ -1,0 +1,32 @@
+<br/>
+<div class="row">
+    <div class="col-sm-12">
+        <button type="submit"
+                class="btn btn-success float-right btn-sm"
+                (click)="addButton()">
+            New
+        </button>
+    </div>
+</div>
+<br/>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">{{ title }}</th>
+        <th scope="col">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let entity of entities">
+        <td>{{ entity[field] }}</td>
+        <td>
+            <button class="btn btn-default btn-sm"
+                    (click)="viewButton(entity?.id)">View</button>
+            <button class="btn btn-primary btn-sm"
+                    (click)="editButton(entity?.id)">Edit</button>
+            <button class="btn btn-danger btn-sm"
+                    (click)="deleteButton(entity?.id)">Delete</button>
+        </td>
+    </tr>
+    </tbody>
+</table>

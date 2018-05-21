@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4>{{viewTitle}}</h4>
+        </div>
+
+        <hr/>
+
+        <div class="col-sm-12" id="entity" *ngFor="let view of viewTemplateData()">
+            {{view}}
+        </div>
+
+        <hr/>
+
+        <div class="col-sm-12">
+            <button type="submit"
+                    class="btn btn-success"
+                    (click)="addButton(entity?.id)">
+                New
+            </button>
+            <button type="submit"
+                    class="btn btn-primary"
+                    (click)="editButton(entity?.id)">
+                Edit
+            </button>
+            <button type="submit"
+                    class="btn btn-danger"
+                    (click)="deleteButton(entity?.id)">
+                Delete
+            </button>
+        </div>
+    </div>
+</div>

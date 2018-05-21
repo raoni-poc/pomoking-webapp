@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h4>Task</h4>
+        </div>
+
+        <hr/>
+
+        <div class="col-sm-12">
+            <p>Task: {{task?.task}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Category: {{task?.categories[0]}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Description: {{task?.description}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Estimate: {{task?.estimate}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Created At: {{task?.created_at?.date}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Updated At: {{task?.updated_at?.date}}</p>
+        </div>
+
+        <div class="col-sm-12">
+            <p>Completed At: {{task?.completed_at?.date}}</p>
+        </div>
+
+
+
+        <div class="col-sm-12">
+            <button type="submit"
+                    class="btn btn-primary"
+                    (click)="editTask(task?.id)">
+                Edit</button>
+            <button type="submit"
+                    class="btn btn-danger"
+                    (click)="deleteTask(task?.id)">
+                Delete</button>
+        </div>
+    </div>
+</div>

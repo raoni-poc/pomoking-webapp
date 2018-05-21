@@ -1,0 +1,14 @@
+.current{
+    background-color: blanchedalmond;
+}
+
+.loading{
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    top: calc(50% - 24px);
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+}
